@@ -52,7 +52,7 @@ def min_max(minmax, coord):
 sc = SparkContext('local', 'New App') 
 res_all = sc\
     .textFile('../../../Wi-FiDatabase/4ngram_ch6_time_type_ta_ra_da_sa.csv')\
-    .filter(lambda line: '00:19:07:8d:ed:53' in line)\
+    .filter(lambda line: '34:bb:26:ff:e6:c2' in line)\
     .map(lambda line: re.split(r'\s+', line))\
     .map(lambda line: (line[0], (monk.convert_h_to_s(line[1]), monk.convert_h_to_s(line[1]))))\
     .reduceByKey(min_max)\
