@@ -3,11 +3,13 @@ import math
 class myHeap:
     def __init__(self):
         self.heap = []
+
     def push(self,
              value):
+        print(value[1])
         self.heap.append(value)
         current = len(self.heap) - 1
-        if len(self.heap) != 0:
+        if len(self.heap) != 1:
             while True:
                 if (self.compare(self.heap[int((current - 1) / 2)], self.heap[current])):
                     self.swap(current, int((current - 1) / 2))
@@ -16,6 +18,7 @@ class myHeap:
                     break
         self.first = self.heap[0]
         self.last = self.heap[len(self.heap) - 1]
+        print('end')
 
     def pop(self):
         self.swap(0, len(self.heap) - 1)
@@ -62,6 +65,7 @@ class myHeap:
         if(left[1] > right[1]):
             return True
         return False
+
     def empty(self):
         if len(self.heap) == 0:
             return True
