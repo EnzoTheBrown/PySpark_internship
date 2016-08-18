@@ -55,10 +55,10 @@ res = sc\
     .reduceByKey(add)\
     .map(lambda line: (line[0][0], (line[1], line[0][1], line[0][2])))\
     .groupByKey().mapValues(list)\
-    .take(10)
+    .collect()
 
-#with open('listener.pickle', 'wb') as f:
-#        pickle.dump(res, f)
+with open('listener.pickle', 'wb') as f:
+        pickle.dump(res, f)
 
 
 
