@@ -12,7 +12,10 @@ res = sc\
     .textFile('hdfs://master:54310/user/hduser1/wifi')\
     .map(lambda line: re.findall(r'[^\s]+', line))\
     .filter(lambda line: len(line) == 7)\
-    .map(lambda line: (line[3], (line[5], line[0])))\
+    .map(lambda line: ((line[3], line[0]), line[5]))\
+    .distinct()\
+    .groupByKey().mapValues(list)\
+    .map(lambda line: (line[0][0], (line[0][1], line[1])))\
     .groupByKey().mapValues(list)\
     .collect()
 
