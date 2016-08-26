@@ -1,0 +1,30 @@
+select count(*) FROM source;
+select avg(OBJECTID) FROM source;
+
+shell hdfs dfs -put Source-afn /user/cloudera/Source/Source-afn;
+load data inpath '/user/cloudera/Source/Source-afn' into table source;
+select count(*) FROM source;
+select avg(OBJECTID) FROM source;
+
+shell hdfs dfs -put Source-afo /user/cloudera/Source/Source-afo;
+load data inpath '/user/cloudera/Source/Source-afo' into table source;
+select count(*) FROM source;
+select avg(OBJECTID) FROM source;
+
+
+shell hdfs dfs -put Source-afp /user/cloudera/Source/Source-afp;
+load data inpath '/user/cloudera/Source/Source-afp' into table source;
+select count(*) FROM source;
+select avg(OBJECTID) FROM source;
+
+
+shell hdfs dfs -put Source-afq /user/cloudera/Source/Source-afq;
+load data inpath '/user/cloudera/Source/Source-afq' into table source;
+select count(*) FROM source;
+select avg(OBJECTID) FROM source;
+
+
+shell hdfs dfs -put Source-afr /user/cloudera/Source/Source-afr;
+load data inpath '/user/cloudera/Source/Source-afr' into table source;
+select count(*) FROM source;
+select avg(OBJECTID) FROM source;

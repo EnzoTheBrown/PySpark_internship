@@ -1,0 +1,4 @@
+select count(*) FROM source;
+select avg(OBJECTID) FROM source;
+select count(*) FROM Source s Where s.objectID in (select objectID FROM object where objectID is not NULL) GROUP BY objectID;
+

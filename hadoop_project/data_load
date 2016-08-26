@@ -1,0 +1,2 @@
+ shell hdfs dfs -put Source-afr /user/cloudera/Source/;
+ load data inpath '/user/cloudera/Source/Source-afr' into table source;

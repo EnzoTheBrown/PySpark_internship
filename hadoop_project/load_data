@@ -1,0 +1,10 @@
+shell hdfs dfs -put Source-afn /user/cloudera/Source/;
+load data inpath '/user/cloudera/Source/Source-afn' into table source;
+shell hdfs dfs -put Source-afo /user/cloudera/Source/;
+load data inpath '/user/cloudera/Source/Source-afo' into table source;
+shell hdfs dfs -put Source-afp /user/cloudera/Source/;
+load data inpath '/user/cloudera/Source/Source-afp' into table source;
+shell hdfs dfs -put Source-afq /user/cloudera/Source/;
+load data inpath '/user/cloudera/Source/Source-afq' into table source;
+shell hdfs dfs -put Source-afr /user/cloudera/Source/;
+load data inpath '/user/cloudera/Source/Source-afr' into table source;

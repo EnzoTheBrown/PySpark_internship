@@ -1,0 +1,2 @@
+[impala]
+query=select count(*) from source
