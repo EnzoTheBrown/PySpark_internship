@@ -1,4 +1,6 @@
-# PySpark_internship
+# PySpark_internship: Tucson Arizona
+
+![alt text](https://github.com/EnzoTheBrown/PySpark_internship/blob/master/TEMPERATURE_ATTACKS/data/d3.png)
 
 ## Goal
 
